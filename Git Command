@@ -1,0 +1,20 @@
+Steps to delete all logs from git.
+
+git checkout --orphan last
+git add -A
+git commit -am "initial commit"
+git branch -D branch_name_to_be_deleted
+git branch -m NotificationService => changing the orphan branch name to new branch name
+git push -f origin NotificationService
+git gc --aggressive --prune=all
+
+===================================================================================================================
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:amodkunwar/AWS-SpringBoot_Microservices.git
+git push -u origin main
+
+===================================================================================================================
