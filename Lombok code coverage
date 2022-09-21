@@ -1,0 +1,10 @@
+First of all, @Data annotation is the combination of @ToString, @EqualsAndHashCode, @Getter, @Setter.
+
+If you just need Lombok to create getters and setters automatically, you can use only @Getter and @Setter annotations instead of @Data.
+
+Besides, to keep the methods created by Lombok outside of this coverage, you can create a lombok.config file in your root directory and have these two lines:
+
+config.stopBubbling = true
+lombok.addLombokGeneratedAnnotation = true
+
+After adding this line, when you go to Sonar, you will see that these classes are covered 100%
